@@ -31,8 +31,8 @@ def init_data(path):
 
     for root, dirs, files in os.walk(path):
         for file in files:
-        data = np.append(data, (create_vect(cv.imread(path + file, cv.IMREAD_COLOR))))
-        data_names = np.append(data_names, file)
+            data = np.append(data, (create_vect(cv.imread(path + file, cv.IMREAD_COLOR))))
+            data_names = np.append(data_names, file)
         return data.reshape(len(files), 768), data_names.reshape(len(files))
 
 
